@@ -1,0 +1,69 @@
+@media screen and (max-width:359px) and (min-width:320px) {
+    html,body{
+        font-size: 50px !important;
+    }
+}
+@media screen and (max-width:374px) and (min-width:360px) {
+    html,body{
+        font-size: 56.25px !important;
+    }
+}
+@media screen and  (min-width:375px) {
+   html,body{
+        font-size: 58px !important;
+    }
+}
+@media screen and (max-width:413px) and (min-width:376px) {
+   html,body{
+        font-size: 64px !important;
+    }
+}
+@media screen and (max-width:639px)  and (min-width:414px){
+   html,body{
+        font-size: 64.6px !important;
+    }
+}@media screen and (min-width:640px) {
+   html,body{
+        font-size: 100px !important;
+    }
+}
+body{
+	background: #f2f2f2;
+}
+a:hover{
+	text-decoration: none;
+}
+.row div{
+	padding: 0;
+}
+.row img{
+	width: 1.6rem;
+	height: 1.94rem;
+}
+.footer-1{
+	height: 1.2rem;
+	text-align: center;
+}
+.footer-1 p{
+	margin: 0;
+	font-size:0.25rem;
+	color:#999;
+}
+.footer-2{
+	width: 100%;
+	background:#fff;
+	position: fixed;
+	bottom: 0;
+	line-height: .6rem;
+}
+.footer-3,.footer-5,.footer-6,.footer-4{
+	width:1.6rem;
+	height: 1.2rem;
+	float: left;
+}
+
+.footer-1 .footer{
+	font-size:0.56rem;
+	color:#999;
+}
+

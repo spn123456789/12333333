@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>分类</title>
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="css js/style7.css" rel="stylesheet">
+		<link href="css js/font/iconfont.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	</head>
+
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12 name">
+					<input type="text" placeholder="请填写收货人姓名" onfocus="this.placeholder=''" onblur="this.placeholder='请填写收货人姓名'" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 telephone">
+					<input type="text" placeholder="请填写手机号码" onfocus="this.placeholder=''" onblur="this.placeholder='请填写手机号码'" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 sity-1">
+					<!-- Small modal -->
+					<button type="button" class="btn btn-primary  sity" data-toggle="modal" data-target=".bs-example-modal-sm">省、市、区<span class="sity-2">></span></button>
+
+					<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+						<div class="modal-dialog modal-sm" role="document">
+							<div class="modal-content">
+								<div class="dropdown">
+									<select name="" value="" class="sele">
+										<option value="">广东省</option>
+									</select>
+									<select name="" value="" class="sele">
+										<option value="">广州市</option>
+									</select>
+									<select name="" value="" class="sele">
+										<option value="">天河区</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 telephone">
+					<input type="text" placeholder="请填写手机号码" onfocus="this.placeholder=''" onblur="this.placeholder='请填写手机号码'" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12  save">
+				<div class="save-1"><span>保存</span></div>
+				</div>
+			</div>
+		</div>
+
+		<script src="bootstrap/js/jquery.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+	</body>
+
+</html>

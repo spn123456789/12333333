@@ -1,0 +1,190 @@
+@media screen and (max-width:359px) and (min-width:320px) {
+	html,
+	body {
+		font-size: 50px !important;
+	}
+}
+
+@media screen and (max-width:374px) and (min-width:360px) {
+	html,
+	body {
+		font-size: 56.25px !important;
+	}
+}
+
+@media screen and (min-width:375px) {
+	html,
+	body {
+		font-size: 58px !important;
+	}
+}
+
+@media screen and (max-width:413px) and (min-width:376px) {
+	html,
+	body {
+		font-size: 64px !important;
+	}
+}
+
+@media screen and (max-width:639px) and (min-width:414px) {
+	html,
+	body {
+		font-size: 64.6px !important;
+	}
+}
+
+@media screen and (min-width:640px) {
+	html,
+	body {
+		font-size: 100px !important;
+	}
+}
+body{
+	background: #F2F2F2;
+}
+.row div{
+	padding: 0;
+}
+.seek,.seek-1{
+	height: 1rem;
+	background: #fff;
+}
+.seek{
+	position:relative;
+}
+.seek-2{
+	height:1rem;
+	position: absolute;
+	top: 0.1rem;
+	left: 0.2rem;
+	border-radius:0.85rem;
+	width: 4.4rem;
+	height: 0.8rem;
+	background: #F2F2F2;
+}
+.seek-2 input{
+	display: inline-block;
+	width: 3.6rem;
+	height:0.6rem ;
+	background: #F2F2F2;
+	border: none;
+	position: absolute;
+	top: 0.1rem;
+	left: 0.6rem;
+	outline: none;
+	font-size: 0.35rem;
+	color:#333;
+}
+.seek-2 img{
+	position: absolute;
+	left:0.18rem;
+	top: 0.26rem;
+	width: 0.3rem;
+	height: 0.33rem;
+}
+.seek-1{
+	position:relative;
+}
+.seek-3{
+	position: absolute;
+	top: 0.1rem;
+	left: 0.2rem;
+	width: 1.2rem;
+	height: 0.8rem;
+	font-size: 0.4rem;
+	text-align: center;
+	line-height: 0.8rem;
+	border-radius: 0.85rem;
+	background: #f69;
+	color: #fff;
+}
+.comp,.sale,.price{
+	text-align: center;
+	line-height: 0.6rem;
+	background: #fff;
+	height: 1rem;
+}
+.comp span,.sale span,.price span,.comp i,.sale i{
+	font-size: 0.4rem;
+	color: #c8c8c8;
+}
+.price i{
+	font-size: 0.4rem;
+	color: #c8c8c8;
+}
+.price span{
+	position: relative;
+	color: #f69;
+}
+.price .up{
+	color: #f69;
+	position: absolute;
+	bottom: 0.08rem;
+	
+}
+.down{
+	position: absolute;
+		top: 0.08rem;
+	
+}
+.row .esire,.row .esire-2{
+	padding: 0.2rem;
+	width: 3.2rem;
+	/*height:3.8rem ;*/
+}
+.row .esire-1{
+	padding: 0.1rem;
+}
+.esire-1 img{
+	width:2.6rem ;
+}
+.esire-1 p{
+	margin: 0;
+	color: #666;
+}
+.esire-1{
+	background: #fff;
+	font-size: 0.25rem;
+}
+.shopcar{
+	width: 1rem;
+	height: 1rem;
+	background-color: #fff;
+	box-shadow: 0.06rem 0.06rem 0.2rem rgba(225,225,225,0.7);
+	border-radius: 50%;
+	background: url(../img/shoppingcar.png);
+	background-size: 0.5rem 0.5rem;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: fixed;
+	bottom: 1.5rem;
+	right: 0;
+	
+}
+.shopcar span{
+	text-align: center;
+	display: inline-block;
+	width: 0.2rem;
+	height: 0.2rem;
+	border-radius: 50%;
+	background:#f69;
+	font-size: 0.2rem;
+	color: #fff;
+	position: absolute;
+	top: 0.2rem;
+	right: 0.14rem;
+}
+.rtop{
+	width: 1rem;
+	height: 1rem;
+	background: #fff;
+	box-shadow: 0.06rem 0.06rem 0.2rem rgba(225,225,225,0.7);
+	border-radius: 50%;
+	background: url(../img/return.png);
+	background-size: 0.5rem 0.7rem;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: fixed;
+	bottom: 0.4rem;
+	right: 0;
+}

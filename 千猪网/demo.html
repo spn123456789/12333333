@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>千猪网</title>
+		<meta name="author" content="Matthew Howell" />
+		<meta name="description" content="fullPage continuous scrolling demo." />
+		<meta name="keywords" content="fullpage,jquery,demo,scroll,loop,continuous" />
+		<meta name="Resource-type" content="Document" />
+
+		<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+		<link rel="stylesheet" type="text/css" href="css/examples.css" />
+		<link rel="stylesheet" href="css/swiper.css">
+		<link rel="stylesheet" href="css/mystyle.css" />
+		<style>
+			html,
+			body {
+				position: relative;
+				height: 100%;
+				overflow: hidden;
+			}
+			
+			body {
+				background: #eee;
+				font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+				font-size: 14px;
+				color: #000;
+				margin: 0;
+				padding: 0;
+			}
+			
+			.swiper-container {
+				width: 100%;
+				height: 100%;
+			}
+			
+			.swiper-slide {
+				text-align: center;
+				font-size: 18px;
+				/*background: #fff;*/
+				/* Center slide text vertically */
+			/*	display: -webkit-box;
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				-webkit-justify-content: center;
+				justify-content: center;
+				-webkit-box-align: center;
+				-ms-flex-align: center;*/
+				/*-webkit-align-items: center;
+				align-items: center;*/
+			}
+		</style>
+		<!--[if IE]>
+        <script type="text/javascript">
+             var console = { log: function() {} };
+        </script>
+    <![endif]-->
+
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+		<script type="text/javascript" src="js/examples.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#fullpage').fullpage({
+					anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', '5thPage', '6thPage', '7thPage', 'lastPage'],
+					menu: '#menu',
+					onLeave:function(index,nextIndex,direction){
+						
+						var bline = $('.bline');
+						var moveli = $('.moveul li');
+						if (nextIndex>1) {
+							$('.hot').css('top','-20px');
+							$('.head').css({'background':'#111','opacity':'0.6','height':'70px'});
+							$('.qzhu').css({'top':'14px','width':'210px'});
+							$('.moveul').css({'height':'22px','marginTop':'16px'});
+							$('.moveul li').css({'fontSize':'16px'});
+							$('.hottele').css({'top':'21px'});
+							$('.hottele span').css({'fontSize':'20px'});
+							$('.hottele i').css({'margin':'0'});
+							$('.bline').css({'top':'-15px','width':'46px','left':(nextIndex-1)*70+325+(nextIndex-2)*2+'px'});
+							//滑块移动
+							/*bline.css({left:(nextIndex-1)*70+325+(nextIndex-2)*2});*/
+						}else{
+							$('.hot').css('top','85px');
+							$('.head').css({'background':'none','opacity':'1','height':'74px'});
+							$('.qzhu').css({'top':'25px','width':'240px'});
+							$('.moveul').css({'height':'40px','marginTop':'26px'});
+							$('.moveul li').css({'fontSize':'20px'});
+							$('.hottele').css({'top':'35px'});
+							$('.hottele span').css({'fontSize':'26px'});
+							$('.hottele i').css({'marginRight':'20px'});
+							$('.bline').css({'top':'-25px','width':'54px','left':'292px'});			
+
+						}
+						
+						// 导航栏滑块移动
+						if(nextIndex > 1) {
+								moveli.on('mouseenter',function(){
+									var lIndex = $(this).index();
+									bline.css({left:lIndex*70+325+(lIndex-2)*2});
+										
+							});
+							moveli.on('mouseleave',function(){
+								if(nextIndex > 1){
+									bline.css({left:(nextIndex-1)*70+325+(nextIndex-2)*2});
+								}
+										
+							});
+							
+						}
+						if(nextIndex == 1){
+							moveli.on('mouseenter',function(){
+								var lIndex = $(this).index();
+								bline.css({left:lIndex*76+292+(lIndex-2)*5});
+							});
+							moveli.on('mouseleave',function(){
+								bline.css({left:292});
+							});
+						}	
+
+					}
+				});
+			});
+		</script>
+
+	</head>
+
+	<body>
+		<!--头部导航栏-->
+		<header class="head">
+			<div class="qzhu"><img src="img/logo.png" alt="" /></div>
+			<a class="hot" href="">热烈祝贺我司荣获 "国家高新技术企业" 认定</a>
+			<nav class="navb">
+				<ul id="menu" class="moveul">
+					<li data-menuanchor="firstPage">
+						<a href="#firstPage">首页</a>
+					</li>
+					<li data-menuanchor="secondPage">
+						<a href="#secondPage">业务</a>
+					</li>
+					<li data-menuanchor="3rdPage">
+						<a href="#3rdPage">案例</a>
+					</li>
+					<li data-menuanchor="4thpage" class="active">
+						<a href="#4thpage">客户</a>
+					</li>
+					<li data-menuanchor="5thPage">
+						<a href="#5thPage">品质</a>
+					</li>
+					<li data-menuanchor="6thPage">
+						<a href="#6thPage">增值</a>
+					</li>
+					<li data-menuanchor="7thPage">
+						<a href="#7thPage">关于</a>
+					</li>
+					<li data-menuanchor="lastPage">
+						<a href="#lastPage">联系</a>
+					</li>
+					<div class="bline"></div>
+				</ul>
+				
+			</nav>
+			<div class="hottele"><i></i>
+				<a href=""><span>4006-123-011</span></a>
+			</div>
+			<a href=""><img src="" /></a>
+		</header>
+		<div class="nav_broadside-1">
+		<div class='nav_broadside'>
+	  		<i class='up'>
+	  			<span></span>
+	  		</i>
+	  		<div class="qq-1">
+		  		<i class='qq'></i>
+	  			<p class="qq-2">
+	  				网站建设咨询
+	  				<br>
+	  				在线沟通，请点我
+	  				<a href="">在线咨询</a>
+	  			</p>
+  			</div>
+  			<div class="phon-1">
+  				<i class='phon'></i>
+  				<p class="phon-2">
+	  				我要做网站，
+	  				<br>
+	  				小助啊，抓紧给我来个电话！
+	  				<span>
+	  					<input type="text" name="">
+	  					<button>回拨</button>
+	  				</span>
+	  			</p>
+  			</div>
+  			<div class="wei-1">
+  				<i class='wei'></i>
+  				<p class="wei-2">
+	  				<img src="img/wechat_code.jpg">
+	  			</p>
+  			</div> 		
+	  		<i class='down'>
+	  			<span></span>
+	  		</i>	  		
+  		</div>
+  		<div class="ok"><span class='glyphicon glyphicon-remove-sign' aria-hidden="true"></span></div>
+  		</div>
+		<div id="fullpage">
+			<div class="section " id="section0">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide wp-1" style="">
+							<div class="lgbox">
+								<div class="nine"></div>
+								<div class="year">
+									<span>年专注，网站建设</span>
+									<i></i>
+									<p>
+										"始于 2008 - 2017 展望未来"
+										<br/> "专注于设计体验，专业于解决方案"
+									</p>
+								</div>
+							</div>
+							<!-- <div class="bgbox"></div>
+							<div class="dsbox"><span></span></div> -->
+						</div>
+						<div class="swiper-slide wp-2" style="">
+							<div class="lgbox-2">
+								<span>设计控，也醉了</span>
+								<i></i>
+								<p>
+									"不是非要高大上，只是醉心于设计"
+									<br/> "我们想，再上一个好案例"
+								</p>
+							</div>
+							<div class="bgbox-2"></div>
+						</div>
+						<div class="swiper-slide wp-3" style="">
+							<div class="box3">
+								<div class="pie">技术派，论研发</div>
+								<div class="loper"></div>
+								<div class="best">
+									我说，业界没有最好的技术，只有最棒的技术开发者
+									<br>
+									定制研发，为您的客户和团队
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide wp-4 ">
+							<div class="frbox">
+								<div class="import">
+									<span>先入为主，布局未来</span>
+									<i></i>
+								</div>
+								<div class="allev">
+									全面布局<u>PC</u>端与	<u>移动</u>端<br>抢占头等商机<br>基于<u>Html5</u>响应式布局，智能识别多种终端设备
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Add Pagination -->
+					<div class="new">
+						<span>NEWS :</span>
+						<a class="moe" href="">more</a>
+						<div class="new-1">
+							<ul id="new">
+								<li><a href="">"品牌影响力！祝贺我司荣获“国家高新技术企业”认定"</a></li>
+								<li><a href="">"还在问做网站哪家公司好？业内人士教你 ..."</a></li>
+								<li><a href="">"钱都砸去哪里了，为什么我的网站推广没 ..."</a></li>
+								<li><a href="">"2016金猴收年，2017闻鸡起舞，千助给您 ..."</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+					<a class="dwn" href="javascript:;"></a>
+				</div>
+			</div>
+			<!-- 我能做什么 -->
+			<div class="section active cando" id="section1">
+				<div class="canbox">
+					<div class="wedo">
+						<i></i>
+						<span>我们能做什么</span>
+					</div>
+					<ul class="cwdo">
+						<li class="high">
+							<u class="cl"></u>
+							<u class="cr"></u>
+							<i class="high-1"></i>
+							<strong>高端定制网站</strong>
+							<p>
+								"企业高端定制网站设计"
+								<br> "彰显品牌形象"
+							</p>
+						</li>
+						<li class="move">
+							<u class="cl"></u>
+							<u class="cr"></u>
+							<i class="move-1"></i>
+							<strong>移动网站建设</strong>
+							<p>
+								"定制手机网站 / 微网站制作"
+								<br> "布局移动互联网"
+							</p>
+						</li>
+						<li class="sys">
+							<u class="cl"></u>
+							<u class="cr"></u>
+							<i class="sys-1"></i>
+							<strong>业务系统研发</strong>
+							<p>
+								"基于 B/S 架构的系统研发"
+								<br> "让业务办公轻松自如"
+							</p>
+						</li>
+						<li class="app">
+							<u class="cl"></u>
+							<u class="cr"></u>
+							<i class="app-1"></i>
+							<strong>APP应用程序</strong>
+							<p>
+								"基于 iOS / Android 应用开发"
+								<br> "掌控智能终端时代"
+							</p>
+						</li>
+						<li class="host">
+							<u class="cl"></u>
+							<u class="cr"></u>
+							<i class="host-1"></i>
+							<strong>服务器运维</strong>
+							<p>
+								"我们不只提供云硬件和网络"
+								<br> "更加注重技术运维"
+							</p>
+						</li>
+					</ul>
+					<label></label>
+				</div>
+			</div>
+			<!-- 案例欣赏 -->
+			<div class="section case" id="section2">
+				<div class="cabox">
+					<div class="calike">
+						<u></u>
+						<span>案例欣赏</span>
+					</div>
+					<div class="atbox">
+						<div class="atbox-1">
+							<div class="ata">
+								<div class="atash"><i></i></div>
+								<img src="img/a1.jpg">
+								<p>
+									"网站设计"
+									<br>
+									<strong class="stg">ATA官网建设</strong>
+									<br> "官方网站 , 上市公司 , 红色"
+								</p>
+								<div class="atash-1"><u></u></div>
+							</div>
+							<div class="ata">
+								<div class="atash"><i></i></div>
+								<img src="img/a3.jpg">
+								<p>
+									"网站设计"
+									<br>
+									<strong>中远国际航空网站设计</strong>
+									<br> "国有企业 , 蓝色 , 欧美风格 , 上市公司"
+								</p>
+								<div class="atash-1"><u></u></div>
+							</div>
+							<div class="ata">
+								<div class="atash"><i></i></div>
+								<img src="img/a2.jpg">
+								<p>
+									"网站设计"
+									<br>
+									<strong>海尔嫩烤箱官方网站建设</strong>
+									<br> "上市公司 , 官方网站 , 欧美风格"
+								</p>
+								<div class="atash-1"><u></u></div>
+							</div>
+						</div>
+					</div>
+					<a class="morede" href="">更多设计案例</a>
+				</div>
+			</div>
+			<!-- <div style="clear: both;"></div> -->
+			<!-- 他们与千助长期合作 -->
+			<div class="section bac4" id="section3">
+				<div class='box4'>
+					<i class='coop'></i><br/>
+					<span>他们与千助长期合作</span>
+					<ul id="for">
+						<i class='active' id="act"></i>
+						<li class='cctv'><i></i></li>
+						<li class='qing'><i></i></li>
+						<li class='lenovo'><i></i></li>
+						<li class='xueyan'><i></i></li>
+						<li class='apple'><i></i></li>
+						<li class='auto'><i></i></li>
+						<li class='ata1'><i></i></li>
+						<li class='cttic'><i></i></li>
+						<li class='haier'><i></i></li>
+						<li class='cosco'><i></i></li>
+					</ul>
+				</div>
+			</div>
+			<!-- 不同媒介 , 同意精彩 -->
+			<div class="section  bac5 box5" id="section4">
+				<div class="vibox5">
+					<i class='re'></i>
+					<span>不同媒介 , 同意精彩</span>
+					<div class='box5_5'>
+						<div class='respo res'>
+							<ul class='ul1'>
+								<li class='re1'></li>
+								<li class='re2'></li>
+								<li class='re3'></li>
+							</ul>
+							<div class='clq'></div>
+							<p>
+								触及视觉灵魂的设计趋势
+								</br>
+								精心布局的用户体验
+								</br>
+								毫无顾忌地通过任何终端
+								</br>
+								呈现在客户的眼前
+							</p>
+						</div>
+						<div class='respo res2'>
+							<ul class='ul2'>
+								<li class='re1'></li>
+								<li class='re2'></li>
+								<li class='re3'></li>
+								<li class='re4'></li>
+							</ul>
+							<div class='clq'></div>
+							<p>
+								Html5 + CSS3 响应式布局
+								</br>
+								卓越的浏览器兼容性
+								</br>
+								因为高端，所以出众
+								</br>
+							</p>
+						</div>
+						<div class='respo res3'>
+							<ul class="ul1">
+								<li class='re1'></li>
+								<li class='re2'></li>
+								<li class='re3'></li>
+							</ul>
+							<div class='clq'></div>
+							<p>
+								基于 B/S 架构的网站建设
+								</br>
+								无障碍的跨平台应用
+								</br>
+								无须用户下载安装即可使用
+								</br>
+								云端管理，轻松维护
+							</p>
+						</div>
+						<a class='much'>响应式网站的照妖镜</a>
+					</div>
+				</div>
+			</div>
+			<!-- 整合营销，抢占商机 -->
+			<div class="section" id="section5">
+				<div class="mabox">
+					<div class="market">
+						<i></i>
+						<span>整合营销，抢占商机</span>
+					</div>
+					<ul class="seo">
+						<li class="se">
+							<u class="crll"></u>
+							<u class="crlr"></u>
+							<i></i><strong>搜索引擎</strong>
+							<p>SEO 优化<br />搜索引擎竞价</p>
+						</li>
+						<li class="weixin">
+							<u class="crll"></u>
+							<u class="crlr"></u>
+							<i></i><strong>微信营销</strong>
+							<p>公众账号 / 微网站<br />微盟 ( 微社区 )</p>
+						</li>
+						<li class="weibo">
+							<u class="crll"></u>
+							<u class="crlr"></u>
+							<i></i><strong>微博营销</strong>
+							<p>企业蓝V认证<br />官方微博接入网站</p>
+						</li>
+						<li class="sms">
+							<u class="crll"></u>
+							<u class="crlr"></u>
+							<i></i><strong>消息推送</strong>
+							<p>短信平台接口<br />Email 推送</p>
+						</li>
+						<li class="pay">
+							<u class="crll"></u>
+							<u class="crlr"></u>
+							<i></i><strong>在线支付</strong>
+							<p>支付宝、银联<br />Paypal 接口</p>
+						</li>
+						<li class="bbs">
+							<u class="crll"></u>
+							<u class="crlr"></u>
+							<i></i><strong>论坛聚人</strong>
+							<p>独立开发<br />会员打通</p>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+			<div class="section bac7" id="section6">
+				<ul class='menu ul3'>
+					<li class='holi'>思想</li>
+					<li class=''>关于</li>
+					<li class=''>荣誉</li>
+					<a class="active1" href=""></a>
+				</ul>
+				<div class='more-container outline'>
+					<div class='swiper-wrapper content1'>
+						<div class='swiper-slide siXiang'>
+							<span class='hou'>厚积薄发</span>
+							<p>登上峰顶，不是为了饱览风光，是为了寻找更高的山峰
+								<br/> 日出东方，告别了昨天的荣耀，将光芒照向更远的地方
+								<br/> 一路上，我们更在意如何积累和沉淀
+							</p>
+							<span>下一秒，让你看，我们到底有多强</span>
+						</div>
+						<div class='swiper-slide keji'>
+							<p>千助科技</p>
+							<p>成立于2008年，坐落于北京中关村科技园区，是中国优秀的互联网服务提供商。自成立以来，专注于高端网站建设、移动互联应用、B/S架构系统研发、云服务器部署和运维，为企业客户的互联网应用提供一站式服务。</p>
+							<p>我们始终坚持以客户需求为导向，为追求用户体验设计，提供有针对性的项目解决方案，千助人将不断地超越自我，挑战险峰！</p>
+						</div>
+
+						<div class='swiper-slide rong'>
+							<span>放下荣誉，放眼未来</span>
+							<ul>
+								<li>
+									<img src="img/point.png"> 2009年 - 荣获海淀区创新企业
+								</li>
+								<li>
+									<img src="img/point.png"> 2010年 - 设计联盟评选为金牌设计企业
+								</li>
+								<li>
+									<img src="img/point.png"> 2010年 - 荣获中关村高新技术企业
+								</li>
+								<li>
+									<img src="img/point.png"> 2011年 - 成功注册 " 千助 " 商标，树立品牌
+								</li>
+								<li>
+									<img src="img/point.png"> 2013年 - 已拥有自主知识产权，国家软件著作权达12项之多
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 页尾 -->
+			<div class="section bac8" id="section7">
+				<div class="b8box">
+					<div class='address'>
+						<img src="img/wechat_code.jpg">
+						<div class='add2 add2_2'>
+							<i></i>
+							<p>
+								中国 · 北京 中关村科技园
+								<br/> 联系电话：010-58851578 / 58859656
+								<br/> 地址：海淀区上地东路盈创动力E座905
+								<br/> 邮编：100085
+								<a href="">[ 工作机会 ]</a>
+							</p>
+						</div>
+						<div class='add2'>
+							<p>
+								Email：Service@1000zhu.com
+								<br/> 中文域名：千助.中国 /千助.com
+								<br/> Copyright 2008-2015 千助科技 版权所有
+								<br/> 京ICP备 08102474 号
+								<br/> 京公网安备 11010802010984 号
+							</p>
+						</div>
+					</div>
+					<div class='qian'>
+						<i class=''></i><br/>
+						<i class=''></i>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/swiper.min.js"></script>
+		<script src="js/myjs.js"></script>
+		<script>
+			var swiper = new Swiper('.swiper-container', {
+				pagination: '.swiper-pagination',
+				paginationClickable: true,
+				//      centeredSlides: true,
+				loop: true,
+				//				autoplay: 2500,
+				autoplayDisableOnInteraction: false,
+				//				slidesPerView: 1h
+				onSlideChangeEnd:function(swiper){
+					if(swiper.activeIndex==2){
+						$('.lgbox-2').animate({left:300,opacity:1},800);
+						$('.bgbox-2').animate({right:50+'%',opacity:0.6},800);
+
+					}
+					if(swiper.activeIndex==3){
+						$('.box3').animate({marginTop:0},300);
+						$('.pie').animate({opacity:1,fontSize:36},500);
+						$('.loper').animate({opacity:1},500,function(){
+							$('.best').animate({opacity:1},1000);
+						});
+						
+						
+					}
+					if(swiper.activeIndex==4 || swiper.activeIndex==0){
+						$('.import').animate({top:0,opacity:1},800);
+						$('.allev').animate({top:0,opacity:1},800);
+
+					}
+				}
+
+			});
+
+		</script>
+	</body>
+
+</html>

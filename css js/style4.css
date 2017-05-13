@@ -1,0 +1,178 @@
+@media screen and (max-width:359px) and (min-width:320px) {
+    html,body{
+        font-size: 50px !important;
+    }
+}
+@media screen and (max-width:374px) and (min-width:360px) {
+    html,body{
+        font-size: 56.25px !important;
+    }
+}
+@media screen and  (min-width:375px) {
+   html,body{
+        font-size: 58px !important;
+    }
+}
+@media screen and (max-width:413px) and (min-width:376px) {
+   html,body{
+        font-size: 64px !important;
+    }
+}
+@media screen and (max-width:639px)  and (min-width:414px){
+   html,body{
+        font-size: 64.6px !important;
+    }
+}@media screen and (min-width:640px) {
+   html,body{
+        font-size: 100px !important;
+    }
+}
+a:hover{
+	text-decoration: none;
+}
+.check-1{
+	height: 2.7rem;
+	position: relative;
+	border-bottom:1px solid #DCDCDC;
+}
+.check-4{
+	position: absolute;
+	left: 0.8rem;
+    top: 0.59rem;
+    width: 1.5rem;
+    height: 1.8rem;
+}
+.check{
+	width: 0.33rem;
+	height: 0.3rem;
+	background:url(../img/a2.png) no-repeat 0 0;
+	background-size:0.33rem 0.6rem;
+	position: absolute;
+	top: 1.34rem;
+	left: 0.24rem;
+}
+.check-2{
+	position: absolute;
+	bottom:-0.1rem;
+	left: 2.5rem;
+}
+.check-2 img{
+	width: 0.5rem;
+	height: 0.5rem;
+}
+.check-2 img,.check-2 a{
+	vertical-align: middle;
+}
+.check-2 a{
+	display: inline-block;
+    width: 0.8rem;
+    height: 0.6rem;
+    font-size: 0.5rem;
+    line-height: 0.6rem;
+	text-align: center;
+}
+.check-5{
+	position: absolute;
+	top:0.56rem;
+	left: 2.5rem;
+}
+.check-5 p{
+	overflow: hidden;
+	font-size: 0.3rem;
+}
+.check-6{
+	position: absolute;
+	right: 0.2rem;
+	bottom: -0.1rem;
+}
+.check-6 a{
+	height: 0.25rem;
+	line-height: 100%;
+}
+.check-6 img,.check-6 span{
+	vertical-align: middle;
+}
+.check-6 img{
+	width: 0.25rem;
+	height: 0.25rem;
+}
+.check-6 span{
+	color:#dfdfdf;
+	font-size: 0.25rem;
+}
+.check-7{
+	height: 2.7rem;
+	position: relative;
+}
+.footer-1{
+	height: 1.2rem;
+	text-align: center;
+}
+.footer-1 p{
+	margin: 0;
+	font-size:0.25rem;
+	color:#999;
+}
+.footer-2{
+	width: 100%;
+	background:#fff;
+	position: fixed;
+	bottom: 0;
+	line-height: .6rem;
+}
+.footer-3,.footer-5,.footer-6,.footer-4{
+	width:1.6rem;
+	height: 1.2rem;
+	float: left;
+}
+
+.footer-1 .footer{
+	font-size:0.56rem;
+	color:#999;
+}
+.Settlement{
+	position: fixed;
+	bottom: 1.2rem;
+	height: 1.1rem;
+}
+.Settlement-1{
+	width: 0.33rem;
+	height: 0.3rem;
+	background:url(../img/a2.png) no-repeat 0 0;
+	background-size:0.33rem 0.6rem;
+	position: absolute;
+	top:0.4rem;
+	left: 0.24rem;
+}
+.Settlement1{
+	position: absolute;
+	top: 0.35rem;
+	left: 0.9rem;
+	width: 1rem;
+	font-size:0.3rem;
+	margin: 0;
+}
+.Settlement-2{
+	position: absolute;
+	top: 0.35rem;
+	left: 1.9rem;
+	width: 2rem;
+	font-size:0.3rem;
+	margin: 0;
+}
+.Settlement-2 span{
+	color: #f69;;
+}
+.Settlement-3{
+	width: 2.2rem;
+	height: 1.1rem;
+	color: #fff;
+	font-size: 0.3rem;
+	background: url(../img/a5.jpg);
+	background-size: 2.2rem 1.1rem;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+    line-height: 1.1rem;
+}

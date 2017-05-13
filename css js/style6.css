@@ -1,0 +1,177 @@
+@media screen and (max-width:359px) and (min-width:320px) {
+	html,
+	body {
+		font-size: 50px !important;
+	}
+}
+
+@media screen and (max-width:374px) and (min-width:360px) {
+	html,
+	body {
+		font-size: 56.25px !important;
+	}
+}
+
+@media screen and (min-width:375px) {
+	html,
+	body {
+		font-size: 58px !important;
+	}
+}
+
+@media screen and (max-width:413px) and (min-width:376px) {
+	html,
+	body {
+		font-size: 64px !important;
+	}
+}
+
+@media screen and (max-width:639px) and (min-width:414px) {
+	html,
+	body {
+		font-size: 64.6px !important;
+	}
+}
+
+@media screen and (min-width:640px) {
+	html,
+	body {
+		font-size: 100px !important;
+	}
+}
+body{
+	background: #F2F2F2;
+}
+.address{
+	border-bottom: 1px solid #DFDFDF;
+	background: #fff;
+	height: 2.7rem;
+	position: relative;
+}
+.address-1{
+	position: absolute;
+	left: 0.3rem;
+	top: 0.2rem;
+	margin: 0;
+	width: 1rem;
+	font-size: 0.35rem;
+}
+.address-2{
+	position: absolute;
+	left: 1.5rem;
+	top: 0.2rem;
+	margin: 0;
+	width:2.5rem;
+	font-size: 0.35rem;
+}
+.address-3{
+	position: absolute;
+	top: 0.7rem;
+	left: 0.3rem;
+	width: 5.8rem;
+	font-size: 0.3rem;
+	margin: 0;
+	color: #666;
+}
+.default-1,.default-2,.default-3{
+	margin: 0;
+}
+.default{
+	background: #F7F7F7;
+	border-radius: 3%/10%;
+	width: 5.8rem;
+	height: 0.8rem;
+	position: absolute;
+	top:1.7rem;
+	left: 0.3rem;
+}
+.default-1{
+	position: absolute;
+	top: 0.2rem;
+	left: 0.2rem;
+	width: 1.8rem;
+	height: 0.4rem;
+}
+.default-2{
+	position: absolute;
+	top: 0.2rem;
+	right: 1.3rem;
+	width: 1rem;
+	height: 0.4rem;
+}
+.default-3{
+	position: absolute;
+	right: 0.1rem;
+	top: 0.2rem;
+	width: 1rem;
+	height: 0.4rem;
+}
+.default-1 i{
+	display: inline-block;
+	width: 0.4rem;
+	height: 0.4rem;
+	border-radius: 50%;
+	background: url(../img/a2.png);
+	background-size: 0.4rem 0.8rem;
+	background-repeat: no-repeat;
+}
+.default-1 i,.default-1 span{
+	position: absolute;
+	vertical-align: middle;
+}
+.default-1 span{
+	right: 0;
+	margin: 0rem;
+	font-size: 0.3rem;
+	color: #666;
+}
+
+.default-2 img,.default-3 img{
+	display: inline-block;
+	width: 0.33rem;
+	height: 0.33rem;
+}
+.default-2 img,.default-2 span{
+	position: absolute;
+	vertical-align: middle;
+}
+.default-2  img,.default-3  img{
+	left: 0;
+	top: 0.02rem;
+}
+.default-2 span,.default-3 span{
+	color: #666;
+	right: 0;
+	top: 0;
+	margin: 0;
+	font-size: 0.3rem;
+}
+.default-3 img,.default-3 span{
+	position: absolute;
+	vertical-align: middle;
+}
+.add{
+	background: #fff;
+	height: 2.7rem;
+	position: relative;
+}
+.new{
+	height: 2rem;
+	position: relative;
+}
+.new-1{
+	position: absolute;
+	bottom: 0;
+	left: 1rem;
+	width:4.4rem;
+	height: 1rem;
+	border: 1px solid #f69;
+	border-radius: 10%/50%;
+}
+.new-1 span{
+	position: absolute;
+	top:0.22rem;
+	left: 1.4rem;
+	font-size: 0.4rem;
+	color: #f69;
+}

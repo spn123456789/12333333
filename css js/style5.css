@@ -1,0 +1,94 @@
+@media screen and (max-width:359px) and (min-width:320px) {
+	html,
+	body {
+		font-size: 50px !important;
+	}
+}
+
+@media screen and (max-width:374px) and (min-width:360px) {
+	html,
+	body {
+		font-size: 56.25px !important;
+	}
+}
+
+@media screen and (min-width:375px) {
+	html,
+	body {
+		font-size: 58px !important;
+	}
+}
+
+@media screen and (max-width:413px) and (min-width:376px) {
+	html,
+	body {
+		font-size: 64px !important;
+	}
+}
+
+@media screen and (max-width:639px) and (min-width:414px) {
+	html,
+	body {
+		font-size: 64.6px !important;
+	}
+}
+
+@media screen and (min-width:640px) {
+	html,
+	body {
+		font-size: 100px !important;
+	}
+}
+body{
+	background: #F2F2F2;
+}
+a:hover {
+	text-decoration: none;
+}
+.presonal{
+	height: 1.8rem;
+	position: relative;
+	border-bottom: 1px solid #F2F2F2;
+	background: #fff;
+}
+.presonal h2{
+	position: absolute;
+	top:0.2rem;
+	left: 0.3rem;
+	margin: 0;
+	font-size:0.4rem;
+}
+.presonal img{
+	position: absolute;
+	right: 0.3rem;
+	top:0.2rem;
+	width: 1.4rem;
+	height: 1.4rem;
+	border-radius: 50%;
+}
+.name{
+	background: #fff;
+	position: relative;
+	height: 1rem;
+	border-bottom: 1px solid #F2F2F2;
+}
+.name-1{
+	position: absolute;
+	top:0.28rem;
+	font-size: 0.32rem;
+	margin: 0;
+}
+.name-2{
+	position: absolute;
+	right: 0.2rem;
+	top:0.22rem;
+	font-size: 0.4rem;
+	margin: 0;
+	color: #DFDFDF;
+}
+.name a{
+	display: inline-block;
+	width: 6rem;
+	height:1rem;
+	color: #000;
+}
