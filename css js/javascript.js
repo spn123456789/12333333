@@ -3,7 +3,7 @@ window.onload = function() {
 	var oSpan2=document.getElementById('span2');
 	var oSpan3=document.getElementById('span3');
 	
-	time();
+	setInterval(time, 1000);
 	
 	function fn(n) {
 		if (n < 10) {
@@ -15,7 +15,7 @@ window.onload = function() {
 	
 	function time() {
 		var oDate = new Date();
-		var endTime = new Date('2017/6/15,23:59:59');
+		var endTime = new Date('2017/8/15,23:59:59');
 		var newTime = (endTime.getTime() - oDate.getTime()) / 1000;
 		var h = fn(parseInt(newTime / (60 * 60) % 24));
 		 
@@ -28,7 +28,6 @@ window.onload = function() {
 		oSpan1.innerHTML = h;
 		oSpan2.innerHTML = mi;
 		oSpan3.innerHTML = s;
-		var arr = [1, 2, 3,1, 2, 3,1, 2, 3,1, 2, 3,1, 2, 3,1,2, 3,1, 2, 3,1, 2, 3,1, 2, 3,1, 2, 3,1, 2, 3,1, 2, 3,1, 2, 3,1, 2, 3,1, 2, 3,1, 2, 3,1, 2, 3,];
-		setInterval(time, 1000);
+		
 	}
 }
